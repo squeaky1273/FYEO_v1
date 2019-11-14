@@ -1,3 +1,68 @@
 body {
-    background: linear-gradient(to right, #0099ff 0%, #ccffff 100%);
+  background: linear-gradient(to right,  #5794bf
+  0%, #ccffff 100%);
+}
+
+h1 {
+  font-size: 100px;
+}
+
+h2 {
+  font-size: 50px;
+}
+
+p {
+  font-size: 30px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #071d2c;
+  }
+  
+li {
+  float: left;
+}
+  
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+  
+li a:hover {
+  background-color: #12476d;
+}
+
+form {
+  border: 3px;
+}
+  
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+  
+button {
+  background-color: #12476d;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+  
+
+button:hover {
+  opacity: 0.8;
 }
