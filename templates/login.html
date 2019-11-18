@@ -6,7 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>FYEO</title>
-    
+        
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        
+    <!-- BOOTSTRAP THEME -->
+    <link rel="stylesheet" href="https://bootswatch.com/4/darkly/bootstrap.min.css">
+
     <!-- CUSTOM STYLES -->
     <link rel="stylesheet" href="static/styles.css">
 
@@ -14,26 +20,54 @@
 <body>
 
 <!-- NAVBAR -->
-<ul>
-    <li style="float:right"><a href="signup.html">Sign Up</a></li>
-    <li style="float:right"><a href="login.html">Login</a></li>
-    <li style="float:right"><a href="features.html">Features</a></li>
-    <li style="float:right"><a href="about.html">About</a></li>
-    <li style="float:right"><a href="index.html">Home</a></li>
-</ul>
+<nav class="navbar navbar-expand navbar-dark bg-primary">
+    <a class="navbar-brand" href="#"></a>
+    <div class="navbar-nav">
+        <a class="nav-item nav-link" href="index.html">Home</a>
+        <a class="nav-item nav-link" href="about.html">About</a>
+        <a class="nav-item nav-link" href="features.html">Features</a>
+        <a class="nav-item nav-link" href="login.html">Login</a>
+        <a class="nav-item nav-link" href="signup.html">Signup</a>
+    </div>
+</nav>
 <br>
-<form action="action_page.php" method="post">
-    <h1>Login</h1>
-    <hr>
-
-    <label for="uname"><b>Username</b></label>
-    <input type="text" placeholder="Enter Username" name="uname" required>
-      
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
-      
-    <button type="submit">Login</button>
-
-    <button type="button" class="cancelbtn">Cancel</button>
-</form>
-</body>
+    {% block content %}
+        <div class="container text-center">
+            <div class = "card">
+                <div class="card text-white bg-primary ; border:5px solid primary; border-radius: 10px; padding: 10px 10px 10px 10px; width:69rem;">
+                    <form method = 'POST' action = '/sign_in_user'>
+    
+                    <h2>Login</h2>
+                    <br>
+                    <!-- If the username doesn't exist it informs the user -->
+                    {% if username_does_not_exist %}
+                    <h5>Username doesn't exist!</h5>
+                    {% endif%}
+    
+                    <label for = 'username'>Username: </label>
+                    <input type = 'username' name = 'username'>
+                    <br>
+                    <br>
+    
+                    <!-- Inform the user if they've entered an incorrect password -->
+                    {% if incorrect_password %}
+                    <h5>Password is incorrect</h5>
+                    {% endif%}
+                    
+                    <label for = 'password'>Password: </label>
+                    <input type = 'password' name = 'password'>
+                    <br>
+                    <br>
+                    <!-- Log in button -->
+                    <button class='button' type='submit'>Log in</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+</html>
+<br>
+<!-- FOOTER -->
+<div class="bg-primary p-5 text-white">
+    <center>&copy; 2019 FYEO Inc</center>
+</div>

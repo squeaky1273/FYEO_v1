@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FYEO</title>
+
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    
+    <!-- BOOTSTRAP THEME -->
+    <link rel="stylesheet" href="https://bootswatch.com/4/darkly/bootstrap.min.css">
+
+    <!-- CUSTOM STYLES -->
+    <link rel="stylesheet" href="static/styles.css">
+
+</head>
+<body>
+    {% block content %}
+
+    <div class="container text-center">
+        <div class = "card">
+            <div class="card-body"  style="background-color: white; border:5px solid white; border-radius: 10px; padding: 10px 10px 10px 10px; width:56rem;">
+                <!-- Form button to a route that removes the user entirely -->
+                <form action = '/delete_user', method = 'POST'>
+                    <h3>Hope to see you again</h3>
+                    <!-- Let's the user know if they've entered the wrong password to confirm -->
+                    {% if incorrect_password %}
+                    <h5>Incorrect password</h5>
+                    {% endif %}
+
+                    <!-- Password for deletion confirmation -->
+                    <label for = 'Deleting account'>Password: </label>
+                    <input type = 'password' name = 'password'>
+                    <br>
+                    <br>
+                    <!-- Button to delete account -->
+                    <button type = 'submit'>Delete Account</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+</body>
+<!-- FOOTER -->
+<div class="bg-primary p-5 text-white">
+    <center>&copy; 2019 FYEO Inc</center>
+</div>

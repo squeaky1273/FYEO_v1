@@ -5,14 +5,17 @@ body {
 
 h1 {
   font-size: 100px;
+  font-family: "DejaVu Sans Mono";
 }
 
 h2 {
   font-size: 50px;
+  font-family: "DejaVu Sans Mono";
 }
 
 p {
   font-size: 30px;
+  font-family: "DejaVu Sans Mono";
 }
 
 ul {
@@ -33,6 +36,7 @@ li a {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+  font-family: "DejaVu Sans Mono";
 }
   
 li a:hover {
@@ -50,6 +54,7 @@ input[type=text], input[type=password] {
   display: inline-block;
   border: 1px solid #ccc;
   box-sizing: border-box;
+  font-family: "DejaVu Sans Mono";
 }
   
 button {
@@ -61,7 +66,6 @@ button {
   cursor: pointer;
   width: 100%;
 }
-  
 
 button:hover {
   opacity: 0.8;

@@ -7,6 +7,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>FYEO</title>
 
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    
+    <!-- BOOTSTRAP THEME -->
+    <link rel="stylesheet" href="https://bootswatch.com/4/darkly/bootstrap.min.css">
+
     <!-- CUSTOM STYLES -->
     <link rel="stylesheet" href="static/styles.css">
 
@@ -14,14 +20,18 @@
 <body>
 
 <!-- NAVBAR -->
-<ul>
-    <li style="float:right"><a href="signup.html">Sign Up</a></li>
-    <li style="float:right"><a href="login.html">Login</a></li>
-    <li style="float:right"><a href="features.html">Features</a></li>
-    <li style="float:right"><a href="about.html">About</a></li>
-    <li style="float:right"><a href="index.html">Home</a></li>
-</ul>
+<nav class="navbar navbar-expand navbar-dark bg-primary">
+    <a class="navbar-brand" href="#"></a>
+    <div class="navbar-nav">
+        <a class="nav-item nav-link" href="index.html">Home</a>
+        <a class="nav-item nav-link" href="about.html">About</a>
+        <a class="nav-item nav-link" href="features.html">Features</a>
+        <a class="nav-item nav-link" href="login.html">Login</a>
+        <a class="nav-item nav-link" href="signup.html">Signup</a>
+    </div>
+</nav>
 <br>
+
 <h2>Features</h2>
 <p>
     Take note of the username and password 
@@ -32,7 +42,8 @@
 </p>
 </body>
 </html>
+
 <!-- FOOTER -->
-<div class="bg-secondary p-5 text-white">
+<div class="bg-primary p-5 text-white">
     <center>&copy; 2019 FYEO Inc</center>
 </div>

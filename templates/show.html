@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FYEO</title>
+
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    
+    <!-- BOOTSTRAP THEME -->
+    <link rel="stylesheet" href="https://bootswatch.com/4/darkly/bootstrap.min.css">
+
+    <!-- CUSTOM STYLES -->
+    <link rel="stylesheet" href="static/styles.css">
+
+</head>
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FYEO</title>
+    
+    <!-- CUSTOM STYLES -->
+    <link rel="stylesheet" href="static/styles.css">
+
+</head>
+<body>
+
+    <h4><a href='/'>Back to Home</a></h4>
+    <!-- IMAGE OF COMPANY -->
+    <div class='form-group'>
+        <h4><center>{{ account.img_url }}</center></h4>
+    </div>
+
+    <!--NAME-->
+    <div class='form-group'>
+        <h3><center>Name of Account</center></h3>
+        <h4><center>{{ account.name }}</center></h4>
+    </div>
+
+    <!--USERNAME -->
+    <div class='form-group'>
+        <h3><center>Username</center></h3>
+        <h4><center>{{ account.username }}</center></h4>
+    </div>
+
+    <!--PASSWORD-->
+    <div class='form-group'>
+        <h3><center>Password</center></h3>
+        <h4><center>{{ account.password }}</center></h4>
+    </div>
+    
+    <p><form action='/adoptions/{{ adoption._id }}/edit'>
+        <input type='hidden' name='_method' value='EDIT'>   
+        <button class='btn btn-primary' type='submit'>Edit Account Info</button>
+    </form></p>
+    
+    <p><form method='POST' action='/adoptions/{{ adoption._id }}/delete'>
+        <input type='hidden' name='_method' value='DELETE'>
+        <button class='btn btn-primary' type='submit'>Delete Account Info</button>
+    </form></p>
+
+</body>
+</html>
+<!-- FOOTER -->
+<div class="bg-primary p-5 text-white">
+    <center>&copy; 2019 FYEO Inc</center>
+</div>

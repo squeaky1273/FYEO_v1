@@ -7,6 +7,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>FYEO</title>
     
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    
+    <!-- BOOTSTRAP THEME -->
+    <link rel="stylesheet" href="https://bootswatch.com/4/darkly/bootstrap.min.css">
+
     <!-- CUSTOM STYLES -->
     <link rel="stylesheet" href="static/styles.css">
 
@@ -14,30 +20,62 @@
 <body>
 
 <!-- NAVBAR -->
-<ul>
-    <li style="float:right"><a href="signup.html">Sign Up</a></li>
-    <li style="float:right"><a href="login.html">Login</a></li>
-    <li style="float:right"><a href="features.html">Features</a></li>
-    <li style="float:right"><a href="about.html">About</a></li>
-    <li style="float:right"><a href="index.html">Home</a></li>
-</ul>
-<br>
-<form action="action_page.php">
-    <h1>Sign Up</h1>
-    <hr>
-      
-    <label for="email"><b>Email</b></label>
-    <input type="text" placeholder="Enter Email" name="email" required>
-      
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
-      
-    <label for="psw-repeat"><b>Repeat Password</b></label>
-    <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
-      
-    <div class="clearfix">
-        <button type="button" class="cancelbtn">Cancel</button>
-        <button type="submit" class="signupbtn">Sign Up</button>
+<nav class="navbar navbar-expand navbar-dark bg-primary">
+    <a class="navbar-brand" href="#"></a>
+    <div class="navbar-nav">
+        <a class="nav-item nav-link" href="index.html">Home</a>
+        <a class="nav-item nav-link" href="about.html">About</a>
+        <a class="nav-item nav-link" href="features.html">Features</a>
+        <a class="nav-item nav-link" href="login.html">Login</a>
+        <a class="nav-item nav-link" href="signup.html">Signup</a>
     </div>
-</form>
+</nav>
+<br>
+{% block content %}
+
+<div class="container text-center">
+    <div class = "card">
+        <div class="card text-white bg-primary ; border:5px solid primary; border-radius: 10px; padding: 10px 10px 10px 10px; width:69rem;">
+
+            <form method = 'POST' action = '/save_user'>
+
+                <h2>Sign up</h2>
+
+                <!-- Display message if username is taken already -->
+                <br>
+                {% if username_is_taken %}
+                    <h5> Username is already taken! </h5>
+                {% endif %}
+            
+                <label for = 'username'>Username: </label>
+                <input type = 'username' name = 'username'>
+                <br>
+                <br>
+
+                <!-- Displays message if passwords do not match -->
+                {% if passwords_differ %}
+                <h5> Passwords do not match! </h5>
+                {% endif %}
+                <label for = 'password'>New Password: </label>
+                <input type = 'password' name = 'password'>
+                <br>
+                <br>
+            
+                <!-- Have user type the passwords twice for verification -->
+                <label for = 'retype_password'>Retype Password: </label>
+                <input type = 'password' name = 'retype_password'>
+                <br>
+                <br>
+                <button class='button' type='submit'>Sign Up</button>
+
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
 </body>
+</html>
+<!-- FOOTER -->
+<div class="bg-primary p-5 text-white">
+    <center>&copy; 2019 FYEO Inc</center>
+</div>

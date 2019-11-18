@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>FYEO</title>
-    
+
     <!-- BOOTSTRAP -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     
@@ -17,39 +17,38 @@
     <link rel="stylesheet" href="static/styles.css">
 
 </head>
+
 <body>
 
-    <h2><center>Edit Account Info</center></h2>
-
+    <h4><a href='/'>Back to Home</a></h4>
     <!-- IMAGE OF COMPANY -->
     <div class='form-group'>
-        <label for='description'><center>Enter Image of Company</center></label><br>
-        <input class='img_url' id='description' type='text' name='img_url'/>
+        <h4><center>{{ account.img_url }}</center></h4>
     </div>
-    
+
     <!--NAME-->
     <div class='form-group'>
-        <label for='description'><center>Enter Name of Account</center></label><br>
-        <input class='form-control' id='description' type='text' name='name'/>
+        <h3><center>Name of Account</center></h3>
+        <h4><center>{{ account.name }}</center></h4>
     </div>
 
     <!--USERNAME -->
     <div class='form-group'>
-        <label for='decription'><center>Enter Username</center></label><br>
-        <input class='form-control' id='description' type='text' name='username'/>
-    </div>
-    
-    <!--PASSWORD-->
-    <div class='form-group'>
-        <label for='description'><center>Enter Password</center></label><br>
-        <input class='form-control' id='description' type='text' name='password'/>
+        <h3><center>Username</center></h3>
+        <h4><center>{{ account.username }}</center></h4>
     </div>
 
-    <p><form action='/adoptions/{{ adoption._id }}/save'>
-        <input type='hidden' name='_method' value='SAVE'>   
+    <!--PASSWORD-->
+    <div class='form-group'>
+        <h3><center>Password</center></h3>
+        <h4><center>{{ account.password }}</center></h4>
+    </div>
+    
+    <p><form method='POST' action='/{{ info._id }}/save'>
+        <input type='hidden' name='_method' value='SAVE'>
         <button class='btn btn-primary' type='submit'>Save Account Info</button>
     </form></p>
-    
+
 </body>
 </html>
 <!-- FOOTER -->
