@@ -1,0 +1,43 @@
+
+{% block content %}
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    
+    <!-- BOOTSTRAP THEME -->
+    <link rel="stylesheet" href="https://bootswatch.com/4/darkly/bootstrap.min.css">
+
+    <!-- CUSTOM STYLES -->
+    <link rel="stylesheet" href="static/styles.css">
+
+    <nav class="navbar navbar-expand navbar-dark bg-primary">
+        <a class="navbar-brand" href="#"></a>
+        <div class="navbar-nav">
+            <a href='infos/new' class='btn btn-default navbar-btn'>New Account Info Log</a>
+        </div>
+    </nav>
+
+</head>
+<body>
+    <h1><center><strong><bold>FYEO</bold</strong></center></h1>
+    <br>
+    <br>
+    <br>
+    <div class='row'>
+        {% for info in infos %}
+            <div class='col-md-3'>
+                <div class="card" style="width: 20rem;">
+                    <h3><center><a href='/infos/{{ info._id }}'>{{ info.img_url }}</a></center></h3>
+                        <div class="card-body">
+                              <h5 class="card-title"><center>{{ info.name }}</center></</h5>
+                        </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
+<!-- FOOTER -->
+<div class="bg-primary p-5 text-white">
+    <center>&copy; 2019 FYEO Inc</center>
+</div>
+{% endblock %}

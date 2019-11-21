@@ -31,7 +31,7 @@
     </div>
 </nav>
 <br>
-{% block content %}
+<!--{% block content %}-->
 
 <div class="container text-center">
     <div class = "card">
@@ -42,10 +42,10 @@
                 <h2>Sign up</h2>
 
                 <!-- Display message if username is taken already -->
-                <br>
+                <!--<br>
                 {% if username_is_taken %}
                     <h5> Username is already taken! </h5>
-                {% endif %}
+                {% endif %}-->
             
                 <label for = 'username'>Username: </label>
                 <input type = 'username' name = 'username'>
@@ -53,9 +53,10 @@
                 <br>
 
                 <!-- Displays message if passwords do not match -->
-                {% if passwords_differ %}
+                <!--{% if passwords_differ %}
                 <h5> Passwords do not match! </h5>
-                {% endif %}
+                {% endif %}-->
+                
                 <label for = 'password'>New Password: </label>
                 <input type = 'password' name = 'password'>
                 <br>
@@ -72,9 +73,10 @@
         </div>
     </div>
 </div>
-{% endblock %}
+<!--{% endblock %}-->
 </body>
 </html>
+<br>
 <!-- FOOTER -->
 <div class="bg-primary p-5 text-white">
     <center>&copy; 2019 FYEO Inc</center>

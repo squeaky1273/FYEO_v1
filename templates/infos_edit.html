@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>FYEO</title>
-    
+
     <!-- BOOTSTRAP -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     
@@ -17,8 +17,25 @@
     <link rel="stylesheet" href="static/styles.css">
 
 </head>
+
 <body>
+    {% block content %}
+
+    <h4><a href='/'>Back to Home</a></h4>
     
+    <div class='row'>
+        <div class='col-sm-6 col-sm-offset-3'>
+            <form method='POST' action='/infos/{{info._id}}'>
+                <input type='hidden' name='_method' value='PUT'/>
+                {% include 'infos_form.html' %}
+                <!-- BUTTON -->
+                <div class='form-group'>
+                    <h4><button class='btn btn-primary' type='submit'>Save Account Info Log</button></h4>
+                </div>
+            </form>
+        </div>
+    </div>
+    {% endblock %}
 </body>
 </html>
 <!-- FOOTER -->
