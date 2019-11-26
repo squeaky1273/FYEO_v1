@@ -27,7 +27,7 @@
         <div class='col-sm-6 col-sm-offset-3'>
             <form method='POST' action='/infos/{{info._id}}'>
                 <input type='hidden' name='_method' value='PUT'/>
-                {% include 'infos_form.html' %}
+                {% include 'partials/infos_form.html' %}
                 <!-- BUTTON -->
                 <div class='form-group'>
                     <h4><button class='btn btn-primary' type='submit'>Save Account Info Log</button></h4>

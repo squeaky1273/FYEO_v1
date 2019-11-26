@@ -1,15 +1,15 @@
-from flask import Flask, request, render_template, redirect, url_for
+from flask import Flask, request, render_template, redirect, url_for, send_from_directory
 from pymongo import MongoClient
 from bson.objectid import ObjectId
 import os
 
-host = os.environ.get('MONGODB_URI', 'mongodb://localhost:27017/Expense_Logger')
+host = os.environ.get('MONGODB_URI', 'mongodb://localhost:27017/FYEO')
 client = MongoClient(host=f'{host}?retryWrites=false')
 db = client.get_default_database()
 
 info_log = db.infos
 
-app = Flask(__name__)
+app = Flask(__name__, static_url_path='')
 
 @app.route('/')
 def infos_main():
@@ -65,6 +65,10 @@ def infos_delete(info_id):
     """Delete one account info log."""
     info_log.delete_one({'_id': ObjectId(info_id)})
     return redirect(url_for('infos_main'))
+
+@app.route('/static/<path:path>')
+def send_static(path):
+    return send_from_directory('static', path)
 
 if __name__ == "__main__":
     app.run(debug=True, host='0.0.0.0', port=os.environ.get('PORT', 5000))
