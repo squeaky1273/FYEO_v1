@@ -1,44 +1,24 @@
-<!DOCTYPE html>
-<html>
-<head>
+{% extends 'base.html' %}
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>FYEO</title>
+{% block content %}
 
-    <!-- BOOTSTRAP -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    
-    <!-- BOOTSTRAP THEME -->
-    <link rel="stylesheet" href="https://bootswatch.com/4/darkly/bootstrap.min.css">
-
-    <!-- CUSTOM STYLES -->
-    <link rel="stylesheet" href="static/styles.css">
-
-</head>
-
-<body>
-    {% block content %}
-
-    <h4><a href='/'>Back to Home</a></h4>
-    
-    <div class='row'>
-        <div class='col-sm-6 col-sm-offset-3'>
-            <form method='POST' action='/infos/{{info._id}}'>
-                <input type='hidden' name='_method' value='PUT'/>
-                {% include 'partials/infos_form.html' %}
-                <!-- BUTTON -->
-                <div class='form-group'>
-                    <h4><button class='btn btn-primary' type='submit'>Save Account Info Log</button></h4>
-                </div>
-            </form>
+    <nav class="navbar navbar-expand navbar-dark bg-primary">
+        <a class="navbar-brand" href="#"></a>
+        <div class="navbar-nav">
+            <a href='/' class='btn btn-default navbar-btn'>Back to Home</a>
         </div>
-    </div>
-    {% endblock %}
-</body>
-</html>
-<!-- FOOTER -->
-<div class="bg-primary p-5 text-white">
-    <center>&copy; 2019 FYEO Inc</center>
-</div>
+    </nav>
+
+    <form method='POST' action='/infos/{{info._id}}'>
+        <h2><center>Edit Account Info Log</center></h2>
+            <input type='hidden' name='_method' value='PUT'/>
+            <div class="container text-center; width:69rem;"></div>
+                {% include 'partials/infos_form.html' %}
+            <br>
+            <!-- BUTTON -->
+            <center><div class='form-group'>
+                <button class='btn btn-primary' type='submit'>Save Account Info Log</button>
+            </div></center>
+        </form>
+
+{% endblock %}

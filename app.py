@@ -43,7 +43,7 @@ def infos_show(info_id):
 @app.route('/infos/<info_id>/edit')
 def infos_edit(info_id):
     """Show the edit form for an account info log."""
-    info = info_log.find_one({'_id': ObjectId(info_log)})
+    info = info_log.find_one({'_id': ObjectId(info_id)})
     return render_template('infos_edit.html', info=info, title='Edit Account Info')
 
 @app.route('/infos/<info_id>', methods=['POST'])

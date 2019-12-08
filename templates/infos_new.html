@@ -1,32 +1,7 @@
+{% extends 'base.html' %}
+
 {% block content %}
-<!DOCTYPE html>
-<html>
-<head>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>FYEO</title>
-    
-    <!-- BOOTSTRAP -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    
-    <!-- BOOTSTRAP THEME -->
-    <link rel="stylesheet" href="https://bootswatch.com/4/darkly/bootstrap.min.css">
-
-    <!-- CUSTOM STYLES -->
-    <link rel="stylesheet" href="static/styles.css">
-
-    <nav class="navbar navbar-expand navbar-dark bg-primary">
-        <a class="navbar-brand" href="#"></a>
-        <div class="navbar-nav">
-            <a href='/' class='btn btn-default navbar-btn'>Back to Home</a>
-        </div>
-    </nav>
-
-</head>
-<br>
-<body>
     <form method='POST' action='/infos'>
         <h2><center>New Account Info Log</center></h2>
         <div class="container text-center; width:69rem;">
@@ -38,10 +13,5 @@
             </div></center>
          </div>
     </form>
-</body>
-</html>
-<!-- FOOTER -->
-<div class="bg-primary p-5 text-white">
-    <center>&copy; 2019 FYEO Inc</center>
-</div>
+
 {% endblock %}

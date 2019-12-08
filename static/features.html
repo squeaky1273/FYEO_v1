@@ -1,29 +1,11 @@
-<!DOCTYPE html>
-<html>
-<head>
+{% extends 'base.html' %}
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>FYEO</title>
-
-    <!-- BOOTSTRAP -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    
-    <!-- BOOTSTRAP THEME -->
-    <link rel="stylesheet" href="https://bootswatch.com/4/darkly/bootstrap.min.css">
-
-    <!-- CUSTOM STYLES -->
-    <link rel="stylesheet" href="static/styles.css">
-
-</head>
-<body>
+{% block content %}
 
 <!-- NAVBAR -->
 <nav class="navbar navbar-expand navbar-dark bg-primary">
     <a class="navbar-brand" href="#"></a>
     <div class="navbar-nav">
-        <a class="nav-item nav-link" href="static/index.html">Home</a>
         <a class="nav-item nav-link" href="static/about.html">About</a>
         <a class="nav-item nav-link" href="static/features.html">Features</a>
         <a class="nav-item nav-link" href="static/login.html">Login</a>
@@ -58,10 +40,5 @@
         </div>
     </div></center>
 </p>
-</body>
-</html>
 
-<!-- FOOTER -->
-<div class="bg-primary p-5 text-white">
-    <center>&copy; 2019 FYEO Inc</center>
-</div>
+{% endblock %}

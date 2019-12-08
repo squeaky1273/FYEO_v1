@@ -1,31 +1,45 @@
-{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+<!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    
+    <!-- BOOTSTRAP THEME -->
+    <link rel="stylesheet" href="https://bootswatch.com/4/darkly/bootstrap.min.css">
+
+    <!-- CUSTOM STYLES -->
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+
+<body>
 <div class="container text-center">
     <div class="card text-white bg-primary ; border:5px solid primary; border-radius: 10px; padding: 10px 10px 10px 10px; width:69rem;">
         <fieldset>
             <!-- IMAGE OF COMPANY -->
             <div class='form-group'>
-                <label for='description'><center>Enter Image of Account</center></label><br>
+                <label for='description'><center>Enter Image of Account:</center></label><br>
                 <input class='form-control' id='description' type='text' name='img'/>
             </div>
     
             <!--NAME-->
             <div class='form-group'>
-                <label for='description'><center>Enter Name of Account</center></label><br>
+                <label for='description'><center>Enter Name of Account:</center></label><br>
                 <input class='form-control' id='description' type='text' name='name'/>
             </div>
 
             <!--USERNAME -->
             <div class='form-group'>
-                <label for='decription'><center>Enter Username</center></label><br>
+                <label for='decription'><center>Enter Username:</center></label><br>
                 <input class='form-control' id='description' type='text' name='username'/>
             </div>
     
             <!--PASSWORD-->
             <div class='form-group'>
-                <label for='description'><center>Enter Password</center></label><br>
+                <label for='description'><center>Enter Password:</center></label><br>
                 <input class='form-control' id='description' type='text' name='password'/>
             </div>
         </fieldset>
     </div> 
 </div>
-{% endblock %}
+</body>
+</html>
