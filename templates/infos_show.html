@@ -16,28 +16,27 @@
             </div>-->
                 <br>
             <div class="card text-white bg-primary ; border:5px solid primary; border-radius: 10px; padding: 10px 10px 10px 10px; width:69rem;">
-                <h5>Name:</h5>
-                <h5>{{ info.name }}</h5>
+                <h2>{{ info.name }}</h2>
             </div>
                 <br>
             <div class="card text-white bg-primary ; border:5px solid primary; border-radius: 10px; padding: 10px 10px 10px 10px; width:69rem;">
-                <h5>Username:</h5>
-                <h5>{{ info.username }}</h5>
+                <h4>Username:</h4>
+                <h4>{{ info.username }}</h4>
             </div>
                 <br>
             <div class="card text-white bg-primary ; border:5px solid primary; border-radius: 10px; padding: 10px 10px 10px 10px; width:69rem;">
-                <h5>Password:</h5> 
-                <h5>{{ info.password }}</h5>
+                <h4>Password:</h4> 
+                <h4>{{ info.password }}</h4>
             </div>
-    
-            <p><form action='/infos/{{ info._id }}/edit'>
+                <br>
+            <h4><form action='/infos/{{ info._id }}/edit'>
                 <input type='hidden' name='_method' value='EDIT'>   
-                <button class='btn btn-primary' type='submit'>Edit Account Info Log</button>
-            </form></p>
-            <p><form method='POST' action='/infos/{{ info._id }}/delete'>
+                <button class='btn btn-primary' type='submit'><h5>Edit Account Info Log</h5></button>
+            </form></h4>
+            <h4><form method='POST' action='/infos/{{ info._id }}/delete'>
                 <input type='hidden' name='_method' value='DELETE'>
-                <button class='btn btn-primary' type='submit'>Delete Account Info Log</button>
-            </form></p>
+                <button class='btn btn-primary' type='submit'><h5>Delete Account Info Log</h5></button>
+            </form></h4>
         </div>
     </div>
 </div>
